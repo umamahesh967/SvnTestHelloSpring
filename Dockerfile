@@ -1,6 +1,5 @@
 # Use an official  runtime as a parent image
 FROM java:8-jre
-FROM maven
 
 # Set the working directory to /app
 WORKDIR /workflowte
@@ -13,5 +12,6 @@ EXPOSE 8121
 
 ENV HOMER="Hiiiiiiiiiiiiiiii sekhar"
 
+
 # Run app.py when the container launches
-CMD ["mvn", "spring-boot:run"]
+CMD ["java","-jar","target/testJarFile-0.0.1-SNAPSHOT.jar"]

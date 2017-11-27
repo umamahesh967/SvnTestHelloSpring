@@ -1,11 +1,13 @@
 version: "2"
 services:
   web:
-    image: testworkflow:1
-    build: ./
     environment:
-      HOMESE: $DISABLE_AUTH
-      NAME: "UMA"
+      WORDPRESS_DB_HOSTURL: db:3306
+      WORDPRESS_DB_: wordpress
+      NUMBER_ENV: 12345
+      mahi: NUMBER_ENV
+    image: uma:1
+    build: ./
     ports:
       - 8121:8121
     
